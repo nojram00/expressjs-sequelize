@@ -8,10 +8,12 @@ router.route('/').get(async (req, res) => {
     res.json(users)
 })
 
-router.route('/body').get((req, res) => {
+router.route('/add').post(async (req, res) => {
     const b = req.body
 
-    res.json(b)
+    const add = await User.create(b)
+
+    res.json(add)
 })
 
 module.exports = router
