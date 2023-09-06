@@ -9,7 +9,9 @@ router.route('/').get(async (req, res) => {
 })
 
 router.route('/body').get((req, res) => {
+    const b = req.body
 
+    res.json(b)
 })
 
 module.exports = router
