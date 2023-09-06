@@ -5,7 +5,8 @@ const sequelize = new Sequelize({
     database: 'next_sequelize_db',
     dialect: 'mysql',
     username: 'root',
-    password: ''
+    password: '',
+    timezone: '+08:00' // Asia/Manila timezone
 })
 
 sequelize.sync().then(() => {
